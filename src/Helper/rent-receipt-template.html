@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Rent Receipt - {$fullMonth} {$year}</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 11pt;
+        }
+
+        td, th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bg-color-aqua {
+            background-color: aqua;
+        }
+
+        .section-font-size-18pt {
+            font-size: 18pt;
+        }
+
+        .section-font-size-15pt {
+            font-size: 15pt;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .padding-0 {
+            padding: 0;
+        }
+
+        .img-fit-in-td {
+            width: 150px;
+            height: 50px;
+        }
+
+        .padding-bottom-10px {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<table class="padding-bottom-10px">
+    <tr>
+        <td colspan="4" class="text-center bg-color-aqua section-font-size-18pt fw-bold">Rent Receipt - {$fullMonth} {$year}</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="text-center section-font-size-15pt fw-bold">Employee Details</td>
+    </tr>
+    <tr>
+        <td colspan="1">Employee ID</td>
+        <td colspan="3" class="fw-bold">{$employeeID}</td>
+    </tr>
+    <tr>
+        <td colspan="1">Full Name</td>
+        <td colspan="3" class="fw-bold">{$fullName}</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="text-center section-font-size-15pt fw-bold">Address of the Rented House</td>
+    </tr>
+    <tr>
+        <td colspan="4">{$address}</td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td class="fw-bold">{$city}</td>
+        <td>Pin Code</td>
+        <td class="fw-bold">{$pinCode}</td>
+    </tr>
+    <tr>
+        <td>State</td>
+        <td class="fw-bold">{$state}</td>
+        <td>Country</td>
+        <td class="fw-bold">{$country}</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="text-center section-font-size-15pt fw-bold">Rent Details</td>
+    </tr>
+    <tr>
+        <td colspan="4">Received with thanks from {$fullName} sum of Rs. {$rentAmount}
+            (Rupees {$getIndianCurrency} only)
+            towards the rent of the above-mentioned residential premise for the month of {$fullMonth} {$year}
+        </td>
+    </tr>
+    <tr>
+        <td>Mode of Payment</td>
+        <td class="fw-bold">{$paymentMode}</td>
+        <td>Payment Date</td>
+        <td class="fw-bold">{$date}</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="text-center section-font-size-15pt fw-bold">Landlord Details</td>
+    </tr>
+    <tr>
+        <td colspan="2">Permanent Account Number (PAN)</td>
+        <td colspan="2" class="fw-bold">{$landlordPAN}</td>
+    </tr>
+    <tr>
+        <td colspan="2">Full Name</td>
+        <td colspan="2" class="fw-bold">{$landlordName}</td>
+    </tr>
+    <tr>
+        <td>Landlord Signature</td>
+        <td class="padding-0"><img class="img-fit-in-td" src="{$landlordSignature}" alt="signature-not-found"></td>
+        <td>Date</td>
+        <td class="fw-bold">{$date}</td>
+    </tr>
+</table>
+<div style="text-align: justify">{$note}</div>
+</body>
+</html>

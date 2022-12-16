@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require_once __DIR__.'/vendor/autoload.php';
+
+use App\Command\RentReceiptCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('Rent Receipt Generator Console App', '0.0.1');
+
+$parameters = include(__DIR__.'/config/config.php');
+
+$app->add(new RentReceiptCommand($parameters));
+$app->run();

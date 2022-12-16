@@ -1,0 +1,6 @@
+.idea
+vendor
+output/*.pdf
+!output/Example_Rent_Receipt.pdf
+signatures/*.png
+!signatures/john_doe.png
