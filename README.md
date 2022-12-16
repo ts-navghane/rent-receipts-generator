@@ -37,10 +37,8 @@ Tokens to note:
 
 function
 
-[Rent Receipt PDF Example](output/2022_04_01_Rent_Receipt.pdf)
+[Rent Receipt PDF Example](output/Example_Rent_Receipt.pdf)
 
 You may use https://www.signwell.com/online-signature/type/ for your name's png signature.
 
 * [Signature Example 1](signatures/john_doe.png)
-
-* [Signature Example 2](signatures/jane_doe.png)
